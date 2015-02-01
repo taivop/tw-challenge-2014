@@ -9,6 +9,7 @@ app.controller('ReceiveController', function ($scope, $http, $location, $state) 
 
   $http.get("/transfer/" + $state.params.urlhash)
     .success(function(data) {
+      debugger
       $scope.transfer = data;
       console.log("Receiver active!", data);
     }).error(function(err){
